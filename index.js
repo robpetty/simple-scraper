@@ -24,7 +24,7 @@ app.get("/test-route", (req, res) => {
       const text = $(this)
         .text()
         .replace(/(\r\n|\n|\r)/gm, "") // remove line breaks
-        .replace(/\s+/g, " ") // collpase multiple spaces to one
+        .replace(/\s+/g, " ") // collapase multiple spaces to one
         .trim(); // remove leading/trailing spaces.
       const href = $(this).attr("href");
 
@@ -41,8 +41,6 @@ app.get("/test-route", (req, res) => {
       }
     });
 
-    //console.log(html);
-    //console.log(links);
     res.json({
       redditLinks,
       nonRedditLinks,
